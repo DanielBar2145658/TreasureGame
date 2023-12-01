@@ -29,7 +29,7 @@ public class ItemCollector : MonoBehaviour
             // Update the UI text
             //coinsText.text = "Coins: " + coins;
         }
-        if (other.gameObject.CompareTag("Emerald"))
+        if (other.gameObject.CompareTag("Treasure"))
         {
             Destroy(other.gameObject);
 

@@ -6,7 +6,7 @@ TagManager:
   tags:
   - Coin
   - Enemy Body
-  - Emerald
+  - Treasure
   layers:
   - Default
   - TransparentFX
