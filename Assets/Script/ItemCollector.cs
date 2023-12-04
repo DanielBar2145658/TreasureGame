@@ -5,7 +5,7 @@ using UnityEngine.UI;
 
 public class ItemCollector : MonoBehaviour
 {
-
+    public string cageDoorTag = "CageDoor";
     int coins = 0;
     [SerializeField] Text coinsText;
     [SerializeField] AudioClip coinPickupSound;  // Add this line
@@ -28,6 +28,18 @@ public class ItemCollector : MonoBehaviour
 
             // Update the UI text
             //coinsText.text = "Coins: " + coins;
+
+            GameObject cageDoor = GameObject.FindGameObjectWithTag("CageDoor"); // Assuming "CageDoor" is the tag of your cage door
+
+            if (cageDoor != null)
+            {
+                Destroy(cageDoor);
+            }
+            else
+            {
+                Debug.LogError("Cage door not found!");
+            }
+
         }
         if (other.gameObject.CompareTag("Treasure"))
         {
