@@ -1,5 +1,23 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!114 &-9079516513615753052
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Music.bank
+  m_EditorClassIdentifier: 
+  Path: Assets/FMOD/Build/Desktop/Music.bank
+  Name: Music
+  StudioPath: 
+  lastModified: 638373051112988634
+  FileSizes: []
+  Exists: 1
 --- !u!114 &-7778104815062834966
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -69,7 +87,7 @@ MonoBehaviour:
   Path: Assets/FMOD/Build/Desktop/Master.bank
   Name: Master
   StudioPath: bank:/Master
-  lastModified: 638369944718241664
+  lastModified: 638369878720976678
   FileSizes:
   - Name: Desktop
     Value: 1036
@@ -90,6 +108,7 @@ MonoBehaviour:
   - {fileID: 8129359726867021800}
   - {fileID: -6055418326800367869}
   - {fileID: 1356418258049439836}
+  - {fileID: -9079516513615753052}
   EditorEvents:
   - {fileID: 877782794060038194}
   - {fileID: -7238573140115897039}
@@ -99,7 +118,7 @@ MonoBehaviour:
   - {fileID: -6055418326800367869}
   StringsBanks:
   - {fileID: 8129359726867021800}
-  cacheTime: 638369944718261649
+  cacheTime: 638373051116292903
   cacheVersion: 131608
 --- !u!114 &877782794060038194
 MonoBehaviour:
@@ -147,7 +166,7 @@ MonoBehaviour:
   FileSizes:
   - Name: Desktop
     Value: 31552
-  Exists: 1
+  Exists: 0
 --- !u!114 &8129359726867021800
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -163,7 +182,7 @@ MonoBehaviour:
   Path: Assets/FMOD/Build/Desktop/Master.strings.bank
   Name: Master.strings
   StudioPath: bank:/Master.strings
-  lastModified: 638369944718251657
+  lastModified: 638373051116292903
   FileSizes:
   - Name: Desktop
     Value: 890
