@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 705507994}
-  m_IndirectSpecularColor: {r: 0.6472593, g: 0.6665416, b: 0.51363826, a: 1}
+  m_IndirectSpecularColor: {r: 0.6472593, g: 0.6665415, b: 0.5136384, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -4242,6 +4242,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6d73f4d256dc7d542984b0ded97b7337, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  masterVolume: 1
+  SFXVolume: 1
+  musicVolume: 1
 --- !u!1 &705507993
 GameObject:
   m_ObjectHideFlags: 0
@@ -4548,28 +4551,28 @@ MonoBehaviour:
       Data2: 1201109422
       Data3: 405406652
       Data4: -50499273
-    Path: event:/Footsteps
+    Path: event:/SFX/Footsteps
   <coinCollected>k__BackingField:
     Guid:
       Data1: -1311706021
       Data2: 1339086403
       Data3: -296412754
       Data4: 1750015117
-    Path: event:/Coin
+    Path: event:/SFX/Coin
   <emeraldCollected>k__BackingField:
     Guid:
       Data1: 720547267
       Data2: 1080463360
       Data3: 1111403158
       Data4: -1988109712
-    Path: event:/Emerald
+    Path: event:/SFX/Emerald
   <music>k__BackingField:
     Guid:
       Data1: -965303303
       Data2: 1265306878
       Data3: 1797295745
       Data4: 541851541
-    Path: event:/BGM
+    Path: event:/Music/BGM
 --- !u!1 &740363278 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: d24bff291445eb048ac2a244c8fad4fa, type: 3}
@@ -6008,8 +6011,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 1}
   m_AnchorMax: {x: 0.5, y: 1}
-  m_AnchoredPosition: {x: 0.0000038147, y: -37}
-  m_SizeDelta: {x: 243.5832, y: 43.921997}
+  m_AnchoredPosition: {x: 3.2389, y: -37}
+  m_SizeDelta: {x: 293.9477, y: 43.922}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &878406410
 MonoBehaviour:
@@ -8073,6 +8076,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1390099474}
   - component: {fileID: 1390099475}
+  - component: {fileID: 1390099476}
   m_Layer: 5
   m_Name: Music
   m_TagString: Untagged
@@ -8149,10 +8153,35 @@ MonoBehaviour:
   m_MinValue: 0
   m_MaxValue: 1
   m_WholeNumbers: 0
-  m_Value: 0
+  m_Value: 1
   m_OnValueChanged:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1390099476}
+        m_TargetAssemblyTypeName: VolumeSlider, Assembly-CSharp
+        m_MethodName: OnSliderValueChanged
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &1390099476
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1390099473}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1a0dc0d76f03b7f4dbf90e11e6e5433a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  volumeType: 2
 --- !u!1001 &1394099423
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -8861,6 +8890,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1596211918}
   - component: {fileID: 1596211919}
+  - component: {fileID: 1596211920}
   m_Layer: 5
   m_Name: SFX
   m_TagString: Untagged
@@ -8937,10 +8967,35 @@ MonoBehaviour:
   m_MinValue: 0
   m_MaxValue: 1
   m_WholeNumbers: 0
-  m_Value: 0
+  m_Value: 1
   m_OnValueChanged:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1596211920}
+        m_TargetAssemblyTypeName: VolumeSlider, Assembly-CSharp
+        m_MethodName: OnSliderValueChanged
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &1596211920
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1596211917}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1a0dc0d76f03b7f4dbf90e11e6e5433a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  volumeType: 1
 --- !u!1 &1597915006
 GameObject:
   m_ObjectHideFlags: 0
@@ -9898,6 +9953,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1814895748}
   - component: {fileID: 1814895749}
+  - component: {fileID: 1814895750}
   m_Layer: 5
   m_Name: Master
   m_TagString: Untagged
@@ -9974,25 +10030,47 @@ MonoBehaviour:
   m_MinValue: 0
   m_MaxValue: 1
   m_WholeNumbers: 0
-  m_Value: 0
+  m_Value: 1
   m_OnValueChanged:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1814895750}
+        m_TargetAssemblyTypeName: VolumeSlider, Assembly-CSharp
+        m_MethodName: OnSliderValueChanged
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &1814895750
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1814895747}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1a0dc0d76f03b7f4dbf90e11e6e5433a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  volumeType: 0
 --- !u!1 &1832371539 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 8a655beeee813624788e4b1d8f2f303d, type: 3}
   m_PrefabInstance: {fileID: 2059630732}
   m_PrefabAsset: {fileID: 0}
---- !u!70 &1832371540
-CapsuleCollider2D:
+--- !u!136 &1832371544
+CapsuleCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1832371539}
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Density: 1
   m_Material: {fileID: 0}
   m_IncludeLayers:
     serializedVersion: 2
@@ -10001,25 +10079,14 @@ CapsuleCollider2D:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
-  m_ForceSendLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_ForceReceiveLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_ContactCaptureLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_CallbackLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
   m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_CompositeOperation: 0
-  m_CompositeOrder: 0
-  m_Offset: {x: 0, y: 0}
-  m_Size: {x: 0.0011811338, y: 0.0011810695}
-  m_Direction: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 0.0005905669
+  m_Height: 0.0011810695
+  m_Direction: 1
+  m_Center: {x: 0, y: 0, z: -2.910383e-10}
 --- !u!1001 &1848421382
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -10867,7 +10934,7 @@ PrefabInstance:
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 8a655beeee813624788e4b1d8f2f303d, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 1832371540}
+      addedObject: {fileID: 1832371544}
   m_SourcePrefab: {fileID: 100100000, guid: 8a655beeee813624788e4b1d8f2f303d, type: 3}
 --- !u!1001 &2063223634
 PrefabInstance:

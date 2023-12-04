@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!114 &-7778104815062834966
+--- !u!114 &-8438951555708689857
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -10,14 +10,41 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/Emerald
+  m_Name: event:/Music/BGM
   m_EditorClassIdentifier: 
-  Path: event:/Emerald
+  Path: event:/Music/BGM
   Guid:
-    Data1: 720547267
-    Data2: 1080463360
-    Data3: 1111403158
-    Data4: -1988109712
+    Data1: -965303303
+    Data2: 1265306878
+    Data3: 1797295745
+    Data4: 541851541
+  Banks:
+  - {fileID: 5856515443801873820}
+  IsStream: 1
+  Is3D: 0
+  IsOneShot: 0
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 17528
+--- !u!114 &-8136978166840005259
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SFX/Coin
+  m_EditorClassIdentifier: 
+  Path: event:/SFX/Coin
+  Guid:
+    Data1: -1311706021
+    Data2: 1339086403
+    Data3: -296412754
+    Data4: 1750015117
   Banks:
   - {fileID: 1356418258049439836}
   IsStream: 0
@@ -27,33 +54,6 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 0
---- !u!114 &-7238573140115897039
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/Footsteps
-  m_EditorClassIdentifier: 
-  Path: event:/Footsteps
-  Guid:
-    Data1: -201707368
-    Data2: 1201109422
-    Data3: 405406652
-    Data4: -50499273
-  Banks:
-  - {fileID: 1356418258049439836}
-  IsStream: 0
-  Is3D: 0
-  IsOneShot: 0
-  Parameters: []
-  MinDistance: 1
-  MaxDistance: 20
-  Length: 360
 --- !u!114 &-6055418326800367869
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -69,38 +69,11 @@ MonoBehaviour:
   Path: Assets/FMOD/Build/Desktop/Master.bank
   Name: Master
   StudioPath: bank:/Master
-  lastModified: 638373066897978744
+  lastModified: 638373115045216329
   FileSizes:
   - Name: Desktop
-    Value: 1036
+    Value: 1340
   Exists: 1
---- !u!114 &-1162397420302478350
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/BGM
-  m_EditorClassIdentifier: 
-  Path: event:/BGM
-  Guid:
-    Data1: -965303303
-    Data2: 1265306878
-    Data3: 1797295745
-    Data4: 541851541
-  Banks:
-  - {fileID: 5856515443801873820}
-  IsStream: 1
-  Is3D: 0
-  IsOneShot: 0
-  Parameters: []
-  MinDistance: 1
-  MaxDistance: 20
-  Length: 17528
 --- !u!114 &11400000
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -119,44 +92,17 @@ MonoBehaviour:
   - {fileID: 1356418258049439836}
   - {fileID: 5856515443801873820}
   EditorEvents:
-  - {fileID: 877782794060038194}
-  - {fileID: -7238573140115897039}
-  - {fileID: -7778104815062834966}
-  - {fileID: -1162397420302478350}
+  - {fileID: -8438951555708689857}
+  - {fileID: -8136978166840005259}
+  - {fileID: 4763397777912850518}
+  - {fileID: 1771770810726792366}
   EditorParameters: []
   MasterBanks:
   - {fileID: -6055418326800367869}
   StringsBanks:
   - {fileID: 8129359726867021800}
-  cacheTime: 638373066898038762
+  cacheTime: 638373115045236273
   cacheVersion: 131608
---- !u!114 &877782794060038194
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/Coin
-  m_EditorClassIdentifier: 
-  Path: event:/Coin
-  Guid:
-    Data1: -1311706021
-    Data2: 1339086403
-    Data3: -296412754
-    Data4: 1750015117
-  Banks:
-  - {fileID: 1356418258049439836}
-  IsStream: 0
-  Is3D: 0
-  IsOneShot: 1
-  Parameters: []
-  MinDistance: 1
-  MaxDistance: 20
-  Length: 0
 --- !u!114 &1356418258049439836
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -172,11 +118,65 @@ MonoBehaviour:
   Path: Assets/FMOD/Build/Desktop/SFX.bank
   Name: SFX
   StudioPath: bank:/SFX
-  lastModified: 638373066898038762
+  lastModified: 638373099960387918
   FileSizes:
   - Name: Desktop
     Value: 31552
   Exists: 1
+--- !u!114 &1771770810726792366
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SFX/Emerald
+  m_EditorClassIdentifier: 
+  Path: event:/SFX/Emerald
+  Guid:
+    Data1: 720547267
+    Data2: 1080463360
+    Data3: 1111403158
+    Data4: -1988109712
+  Banks:
+  - {fileID: 1356418258049439836}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
+--- !u!114 &4763397777912850518
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SFX/Footsteps
+  m_EditorClassIdentifier: 
+  Path: event:/SFX/Footsteps
+  Guid:
+    Data1: -201707368
+    Data2: 1201109422
+    Data3: 405406652
+    Data4: -50499273
+  Banks:
+  - {fileID: 1356418258049439836}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 0
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 360
 --- !u!114 &5856515443801873820
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -192,7 +192,7 @@ MonoBehaviour:
   Path: Assets/FMOD/Build/Desktop/Music.bank
   Name: Music
   StudioPath: bank:/Music
-  lastModified: 638373066898018741
+  lastModified: 638373099960177685
   FileSizes:
   - Name: Desktop
     Value: 215808
@@ -212,8 +212,8 @@ MonoBehaviour:
   Path: Assets/FMOD/Build/Desktop/Master.strings.bank
   Name: Master.strings
   StudioPath: bank:/Master.strings
-  lastModified: 638373066897998751
+  lastModified: 638373115045236273
   FileSizes:
   - Name: Desktop
-    Value: 970
+    Value: 1062
   Exists: 1
