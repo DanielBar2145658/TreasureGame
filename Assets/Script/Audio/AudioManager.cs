@@ -7,6 +7,19 @@ using FMOD.Studio;
 
 public class AudioManager : MonoBehaviour
 {
+    [Header("Volume")]
+    [Range(0, 1)]
+    public float masterVolume = 1;
+    [Range(0, 1)]
+    public float SFXVolume = 1;
+    [Range(0, 1)]
+    public float musicVolume = 1;
+
+
+    private Bus masterBus;
+    private Bus sfxBus;
+    private Bus musicBus;
+
     private List<EventInstance> eventInstances;
 
     private EventInstance musicEventInstance;
@@ -22,11 +35,22 @@ public class AudioManager : MonoBehaviour
         instance = this;
 
         eventInstances = new List<EventInstance>();
+
+        masterBus = RuntimeManager.GetBus("bus:/");
+        sfxBus = RuntimeManager.GetBus("bus:/SFX");
+        musicBus = RuntimeManager.GetBus("bus:/Music");
     }
 
     private void Start()
     {
         InitializeMusic(FMODEvents.instance.music);
+    }
+
+    private void Update()
+    {
+        masterBus.setVolume(masterVolume);
+        sfxBus.setVolume(SFXVolume);
+        musicBus.setVolume(musicVolume);
     }
 
     public void PlayOneShot(EventReference sound, Vector3 worldPos)
