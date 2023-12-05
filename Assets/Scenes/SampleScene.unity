@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 705507994}
-  m_IndirectSpecularColor: {r: 0.6472593, g: 0.6665416, b: 0.51363826, a: 1}
+  m_IndirectSpecularColor: {r: 0.6472593, g: 0.6665415, b: 0.5136384, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -10232,6 +10232,7 @@ CapsuleCollider:
   m_Height: 0.0011810695
   m_Direction: 1
   m_Center: {x: 0, y: 0, z: -2.910383e-10}
+
 --- !u!114 &1832371548
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10245,6 +10246,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ID: Diamond
+
 --- !u!1001 &1848421382
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -11090,9 +11092,11 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 8a655beeee813624788e4b1d8f2f303d, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1832371544}
+
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 8a655beeee813624788e4b1d8f2f303d, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1832371548}
+
   m_SourcePrefab: {fileID: 100100000, guid: 8a655beeee813624788e4b1d8f2f303d, type: 3}
 --- !u!1001 &2063223634
 PrefabInstance:
