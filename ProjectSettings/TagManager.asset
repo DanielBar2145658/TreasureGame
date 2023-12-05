@@ -8,6 +8,10 @@ TagManager:
   - Enemy Body
   - Treasure
   - CageDoor
+  - Gold
+  - Emerald
+  - Diamond
+  - Book
   layers:
   - Default
   - TransparentFX

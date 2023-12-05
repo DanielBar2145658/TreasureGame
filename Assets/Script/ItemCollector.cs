@@ -9,7 +9,10 @@ public class ItemCollector : MonoBehaviour
     int coins = 0;
     [SerializeField] Text coinsText;
     [SerializeField] AudioClip coinPickupSound;  // Add this line
+    [SerializeField] ItemManagerUI managerUI;
     private AudioSource audioSource;  // Add this line
+
+    
 
     private void Start()
     {
@@ -43,8 +46,22 @@ public class ItemCollector : MonoBehaviour
         }
         if (other.gameObject.CompareTag("Treasure"))
         {
+
+            Item item = other.gameObject.GetComponent<Item>();
+
+            if (item.ID == "Book")
+                managerUI.DisableItemUI(0);
+            else if (item.ID == "Diamond")
+                managerUI.DisableItemUI(1);
+            else if (item.ID == "Emerald")
+                managerUI.DisableItemUI(2);
+            else if (item.ID == "Gold")
+                managerUI.DisableItemUI(3);
+
             Destroy(other.gameObject);
 
+
+            
 
             // Play the emerald pickup sound
             AudioManager.instance.PlayOneShot(FMODEvents.instance.emeraldCollected, this.transform.position);
