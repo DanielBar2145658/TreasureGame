@@ -15,6 +15,7 @@ public class PlayerLife : MonoBehaviour
         }
     }
 
+
     private void OnCollisionEnter(Collision collision)
     {
         if(collision.gameObject.CompareTag("Enemy Body"))
@@ -30,6 +31,8 @@ public class PlayerLife : MonoBehaviour
         
         Invoke(nameof(ReloadLevel), 1.3f);
         dead = true;
+
+        Debug.Log("is dead");
     }
     void ReloadLevel()
     {

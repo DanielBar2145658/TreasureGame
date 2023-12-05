@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 705507994}
-  m_IndirectSpecularColor: {r: 0.6472593, g: 0.6665416, b: 0.51363826, a: 1}
+  m_IndirectSpecularColor: {r: 0.6472593, g: 0.6665415, b: 0.5136384, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -1469,7 +1469,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 175.5655, y: 28.191612}
+  m_AnchoredPosition: {x: 175.56549, y: 28.19159}
   m_SizeDelta: {x: -354.312, y: -226.078}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &223874447
@@ -2657,7 +2657,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -176.62247, y: 176.7367}
+  m_AnchoredPosition: {x: 23, y: -176.74}
   m_SizeDelta: {x: 446.7551, y: 96.5266}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &454452090
@@ -3439,7 +3439,7 @@ Transform:
   m_GameObject: {fileID: 577411444}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1.55, y: 1.69, z: 64.9}
+  m_LocalPosition: {x: 1.55, y: 1.69, z: 63.29}
   m_LocalScale: {x: 0.1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -3790,6 +3790,8 @@ GameObject:
   - component: {fileID: 607073511}
   - component: {fileID: 607073513}
   - component: {fileID: 607073512}
+  - component: {fileID: 607073514}
+  - component: {fileID: 607073515}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -3956,6 +3958,7 @@ MonoBehaviour:
   coinsText: {fileID: 0}
   managerUI: {fileID: 454452090}
   coinPickupSound: {fileID: 8300000, guid: 9ab336f7730f58642af07dace2c86720, type: 3}
+  totalTreasures: 4
 --- !u!114 &607073513
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3968,6 +3971,32 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9857a71013b8b024295f534441943d60, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &607073514
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 607073505}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ecdce78a1b032de40af8a9d4e7e51b6a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fallThreshold: -5
+--- !u!114 &607073515
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 607073505}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ecdce78a1b032de40af8a9d4e7e51b6a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fallThreshold: -10
 --- !u!1001 &610354018
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5226,6 +5255,7 @@ MonoBehaviour:
   coinsText: {fileID: 0}
   managerUI: {fileID: 0}
   coinPickupSound: {fileID: 8300000, guid: 61f452c225d7deb48a6eaa3afc89d0a7, type: 3}
+  totalTreasures: 4
 --- !u!65 &756409897
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -10112,7 +10142,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -93.286415, y: 29.835732}
+  m_AnchoredPosition: {x: -93.28638, y: 29.835754}
   m_SizeDelta: {x: -429.8045, y: -255.8375}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1814895749
@@ -11032,7 +11062,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 8a655beeee813624788e4b1d8f2f303d, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 68.06
+      value: 67.02
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 8a655beeee813624788e4b1d8f2f303d, type: 3}
       propertyPath: m_LocalRotation.w

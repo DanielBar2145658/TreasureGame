@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class ItemCollector : MonoBehaviour
 {
@@ -11,6 +12,9 @@ public class ItemCollector : MonoBehaviour
     [SerializeField] ItemManagerUI managerUI;
     [SerializeField] AudioClip coinPickupSound;  // Add this line
     private AudioSource audioSource;  // Add this line
+
+    private int collectedTreasures = 0;
+    public int totalTreasures = 5;
 
     private void Start()
     {
@@ -61,6 +65,23 @@ public class ItemCollector : MonoBehaviour
             Destroy(other.gameObject);
             // Update the UI text
             //coinsText.text = "Coins: " + coins;
+
+            collectedTreasures++;
+
+            // Check for victory condition
+            if (collectedTreasures == totalTreasures)
+            {
+                YouWin();
+            }
+
+            // Destroy the collected treasure
+            Destroy(item.gameObject);
         }
+    }
+
+    void YouWin()
+    {
+        // Load the YouWinScene when the player wins
+        SceneManager.LoadScene("YouWinScene");
     }
 }
