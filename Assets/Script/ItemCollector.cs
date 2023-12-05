@@ -8,11 +8,9 @@ public class ItemCollector : MonoBehaviour
     public string cageDoorTag = "CageDoor";
     int coins = 0;
     [SerializeField] Text coinsText;
-    [SerializeField] AudioClip coinPickupSound;  // Add this line
     [SerializeField] ItemManagerUI managerUI;
+    [SerializeField] AudioClip coinPickupSound;  // Add this line
     private AudioSource audioSource;  // Add this line
-
-    
 
     private void Start()
     {
@@ -47,8 +45,8 @@ public class ItemCollector : MonoBehaviour
         if (other.gameObject.CompareTag("Treasure"))
         {
 
-            Item item = other.gameObject.GetComponent<Item>();
 
+            Item item = other.gameObject.GetComponent<Item>();
             if (item.ID == "Book")
                 managerUI.DisableItemUI(0);
             else if (item.ID == "Diamond")
@@ -57,15 +55,10 @@ public class ItemCollector : MonoBehaviour
                 managerUI.DisableItemUI(2);
             else if (item.ID == "Gold")
                 managerUI.DisableItemUI(3);
-
-            Destroy(other.gameObject);
-
-
-            
-
             // Play the emerald pickup sound
             AudioManager.instance.PlayOneShot(FMODEvents.instance.emeraldCollected, this.transform.position);
 
+            Destroy(other.gameObject);
             // Update the UI text
             //coinsText.text = "Coins: " + coins;
         }
